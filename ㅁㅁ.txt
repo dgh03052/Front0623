@@ -1,0 +1,115 @@
+웹퍼블리셔 : 디자이너와 개발자 사이에서 다리 역할을 하는 사람
+
+tomco3  : 쌤 깃허브 이름
+code 눌러서 downloadzip 다운받기
+
+html
+
+vs코드 단축키
+alt+ shift + r + r : 현재 보고 있는 폴더창이 열림 
+
+alt + z : 자동줄바꿈 (보기 메뉴에 있음)
+
+ctrl + b : 창 열고 닫기
+
+alt + l + o : go live
+
+ctrl + alt + a (내가 키 바인딩 해서 만든 조합) : 글자를 태그로 감싸줌
+
+alt + 클릭 : 띄어져 있는 여러줄을 동시에 선택
+
+ctrl + y : 앞으로 되돌리기
+
+alt + shift + a : 부분주석
+
+alt + 클릭 : 동시선택
+
+alt + 클릭 후 ctrl + alt + a : 내가 선택한 문단들을 태그로 각각 한번에 감싸 줄 수 있음
+
+ctrl + alt + a 사용시 속성을 쓰고 싶을 때 대괄호 안에 써 주면 됨
+ex) a[target=_blank] 하면 <a href="https://youtu.be/EKFM5yeXdck" target="_blank">https://youtu.be/EKFM5yeXdck</a>로 됨
+
+ctrl + enter : 커서가 끝에 없어도 줄 바꿈 없이 엔터가 됨
+
+ctrl + shif :  선택
+
+ctrl + space bar : 자동완성 보여줌
+
+파일에서 자동저장 체크하기(생긴지 4-5개월 정도 밖에 되지 않음)
+
+ctrl + k + s : 단축키 설정(키바인딩)
+
+emmet:태그 업데이트 : 키 바인딩 가서 단축키 설정 ctrl + alt + i  -> 변경할 태그 startag 클릭 후 ctrl + alt + i 한 후 변경할 태그 써주면 start tag와 end tag가 동시에 바뀜
+
+ctrl + home : 맨위로 감
+
+ctrl + end : 맨 밑으로 감
+
+ctrl + shift + enter : 위쪽 개행
+
+alt + 방향키 : 위치이동
+
+ctrl + g : 찾아갈 줄 번호 검색하면 바로 그쪽으로 가짐
+
+ctrl + h : 문자찾기 또는 변경
+
+열린태그 끝에 커서를 갖다대고 alt + shift + 오른쪽방향키 : 열린태그와 닫힌태그 안에 있는 내용들이 한번에 선택됨
+
+
+
+
+prettier : 키 바인딩 가서 단축키 설정 ctrl + alt + p
+Beautify : 키 바인딩 가서 단축키 설정 ctrl + alt + b
+Remove Tag(감싼태그 지우기) : 키 바인딩 가서 단축키 설정 ctrl+alt+K ->열린태그나 닫힌태그 하나 클릭해서 단축키 누르면 열린태그와 닫힌태그가 동시에 삭제됨
+
+text-align: center :  단축키 : tac
+background-color : 단축키 : bac
+
+
+
+
+설치해야할것들
+image preview (vs에서 src에 마우스 갖다대면 이미지를 미리 볼 수 있음)
+korean language pack (한국어로 변경)
+live server
+Beautify(자동 줄맞춤)
+prettier(자동 줄맞춤) 
+
+
+ctrl + 숫자0 : 화면크기가 100%로 돌아감
+
+타이틀: 제목표시줄에 마우스 커서를 갖다대면 나오는 글들
+
+c/s 개발자? : client : 퍼블리셔, 프론트엔드, server : 백엔드
+
+Markup Language : 정보를 구조화하는 언어
+
+폴더에 문서확장자가 안뜨면 보기에서 파일 확장명 클릭하기
+
+
+정보와 데이터의 차이점은? 
+스키마란?
+
+깃 홈페이지에서 new 레파지토리 생성 후 데스크탑 깃허브에서 클론레파지토리 생성
+
+깃허브 삭제하는법 : settings - general - delete this repository
+
+깃허브에서 웹호스팅 하는 법 : settings - pages - source의 none을 main으로 변경 후 save
+
+다른사람을 내 레파지토리에 초대하는 법 : settings - collaborators - add people
+초대받았을 경우 허락을 해줘야는데 수락버튼이 이메일로 옴
+
+초대한 사람의 닉넴만 봐서는 누군지 모르기 때문에 current repository클릭 후 오른쪽버튼 create alise에서 이름(별명) 지어줄 수 있음
+
+다른사람 작업물을 갖고 오고 싶으면 clone repository에서 그 사람 아이디 검색해서 가져오면 됨
+
+다른사람 작업물을 갖고 오고 싶으면 그 사람 폴더 선택해서 vs열면 됨
+
+작업하고 commit(로컬 컴퓨터) 후 push(원격(공용)저장소) 
+
+pull orighin이 뜨면 누군가 수정했다는 뜻
+
+view on github 클릭하면 크롬이 아닌 다른 브라우저로 열릴 때 브라우저 설정에서 기본 브라우저 클릭 후 크롬으로 변경해주기
+
+내 컴퓨터에 있는 깃허브 위치를 바꾸고 싶을 때 : 깃허브 데스크탑에서 먼저 폴더 지우기(체크박스에 체크하면 안됨 체크하면 원본도 날라감) - 기존 폴더에서 파일들 잘라낸 후(.git폴더 꼭 가져가야 함(보기에서 숨긴항목 체크)) 
+변경할 위치에 폴더 생성 후 파일들 붙여넣고 데스크탑 깃허브에서 add repository - 변경한 폴더선택
