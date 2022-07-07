@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-/* 12 그리드 시스템 class*/
-/* col-숫자 -> 숫자는 기둥수 */
+/* 12 그리드 시스템 class */
+/* col-숫자 -> 숫자는 기둥수(비율) */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -15,12 +15,11 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-/* col-클래스적용시 옆으로 흐름셋팅 */
+/* col- 클래스적용시 옆으로 흐름셋팅 */
 [class*="col-"] {
     float: left;
     padding: 15px;
     border: 1px solid red;
     /* 패딩과 보더를 포함하는 박스 */
     box-sizing: border-box;
-    
-  }
+}
