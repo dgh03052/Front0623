@@ -91,17 +91,24 @@
             - deg는 각도의 단위(도:degree)
          */
         #trans1:hover img {
-            
+            transform: rotateY(180deg);
+            /*deg는 각도를 나타냄*/
+            /* 필터 grayscale(값%) - 흑백효과*/
+            filter: grayscale(100%)
         }
 
         /* 
             2. rotateX(각도deg) - X축회전
          */
         #trans2 img {
-            
+            transform: rotateX(180deg);
+            /* 흐림효과 */
+            filter: blur(2px);
         }
+
         #trans2:hover img {
-            
+            transform: rotateX(0deg);
+            filter: blur(0px);
         }
 
         /* 
@@ -122,7 +129,8 @@
             - 이동방향: + 는 오른쪽, - 는 왼쪽
           */
         #trans3:hover img {
-           
+            transform: translateX(100px);
+
         }
 
         /* 
@@ -134,7 +142,7 @@
             - 이동방향: + 는 아랫쪽, - 는 윗쪽
           */
         #trans4:hover img {
-           
+            transform: translateY(-100%);
         }
 
         /* 
@@ -148,7 +156,8 @@
                         - 는 왼쪽/윗쪽
           */
         #trans5:hover img {
-           
+            transform: translate(-200px, -200px);
+
         }
 
         /* 
@@ -159,12 +168,18 @@
                 (변경가능: transform-origin)
            */
         #trans6:hover img {
-            
+            transform: rotate(5478deg);
+            /* 트랜지션 시간설정 */
+            transition-duration: 5s;
         }
 
         /* 회전축 변경하기 */
         #trans6 img {
-            
+            transform-origin: 70% 70%;
+            /* transform-origin: 가로 세로;
+            -가로값: left, right, center, 몇px, 몇% 
+            -세로값: top, bottom, center, 몇px, 몇% 
+            -기본값: 가로, 세로, center임 ! */
         }
 
         /* 
@@ -174,7 +189,7 @@
             - 각도가 양수/음수에 따라 기울임 방향달라짐                
         */
         #trans7:hover img {
-           
+            transform: skewX(-30px);
         }
 
         /* 
@@ -185,11 +200,11 @@
                - 값이 0이면 사라짐
              */
         #trans8 img {
-            
+            transform: scale(0);
         }
 
         #trans8:hover img {
-          
+            transform: scale(2);
         }
 
         /* 
@@ -197,7 +212,8 @@
             transform: 속성1 속성2 속성3 .....;
         */
         #trans9:hover img {
-            
+            transform: scale(2) translate(-200%, -100%) rotateX(1200deg) skewX(50deg) rotate(5300deg);
+            transition-duration: 10s;
         }
 
         /* 
@@ -208,37 +224,27 @@
             - 순서는 나중에 그려진요소가 위에 온다
         */
         /* 2개의 이미지를 겹치게한다 */
-        #trans10 img{
-            
-        }
+        #trans10 img {}
 
 
         /* 1. 보거미 처음상태(돌아옴) */
         /* Y축 0도로 돌아옴 - 0.4초 기다림 */
-        #trans10 img:last-child {
-           
-        }
+        #trans10 img:last-child {}
 
 
         /* 2. 보거미 오버상태 */
         /* Y축 90도회전 - 회전후 안보임*/
-        #trans10:hover img:last-child {
-           
-        }
+        #trans10:hover img:last-child {}
 
         /* 3. 유정이 처음상태(돌아옴) */
         /* 처음에 이미 Y축 90도 회전상태 - 안보임 */
-        #trans10 img:first-child {
-           
-        }
+        #trans10 img:first-child {}
 
 
         /* 4. 유정이 오버상태 */
         /* Y축 0도로 회전 
         - 보거미 0.4초 돌동안 기다렸가 0.4초돌기 */
-        #trans10:hover img:first-child {
-           
-        }
+        #trans10:hover img:first-child {}
 
 
 
