@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description"
+    content="Front-end 장우혁 개인 프로젝트 입니다. 애견홈페이지를 만들었습니다."/>
+    <title>뭉개뭉개 애견홈페이지</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body class="moong">
+    <!-- 1.상단영역 -->
+    <div id="top">
+        <header class="moong top">
+            <!-- 1-1.메인로고 -->
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="뭉개뭉개로고">
+                </a>
+            </h1>
+            <!-- 1-2. 탑메뉴 -->
+            <aside class="tmenu">
+                <!-- 플렉스박스 -->
+                <ul class="fbx">
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li>
+                        <!-- sns메뉴 -->
+                        <!-- 플렉스박스 -->
+                        <ol class="sns fbx">
+                            <li>
+                                <a href="#" title="트위터 바로가기">
+                                    <span class="ir">
+                                        트위터 바로가기
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="인스타그램 바로가기">
+                                    <span class="ir">
+                                        인스타그램 바로가기
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="페이스북 바로가기">
+                                    <span class="ir">
+                                        페이스북 바로가기
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+
+            </aside>
+            <!-- 1-3. GNB메뉴 -->
+            <nav class="gnb">                
+                <!-- 플렉스박스+가로중앙 -->
+                <ul class="fbx jcc">
+                    <li class="sm">
+                        <a href="#">프로그램 소개</a>
+                        <!-- 서브메뉴 -->
+                        <div class="smenu">
+                            <ol>
+                                <li>
+                                    <a href="#">프로그램 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">인물소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">인물관계도</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">미리보기</a>
+                    </li>
+                    <li class="sm">
+                        <a href="#">동영상</a>
+                        <!-- 서브메뉴 -->
+                        <div class="smenu">
+                            <ol>
+                                <li>
+                                    <a href="#">클립영상</a>
+                                </li>
+                                <li>
+                                    <a href="#">다시보기</a>
+                                </li>
+                                <li>
+                                    <a href="#">예고편</a>
+                                </li>
+                                <li>
+                                    <a href="#">스페셜</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="sm">
+                        <a href="#">사진첩</a>
+                        <!-- 서브메뉴 -->
+                        <div class="smenu">
+                            <ol>
+                                <li>
+                                    <a href="#">현장 포토</a>
+                                </li>
+                                <li>
+                                    <a href="#">대표 포스터</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">OST</a>
+                    </li>
+                    <li>
+                        <a href="#">시청자 게시판</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 햄버거버튼 -->
+            <button class="ham" onclick="document.querySelector('.top').classList.toggle('on')"></button>
+        </header>
+    </div>
+    
+</body>
+</html>
