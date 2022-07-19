@@ -1,8 +1,9 @@
 @charset "utf-8";
+/* 도깨비 PJ 초기화 CSS - reset.css */
 /* 기본셋팅된 요소디자인 초기화 */
 
 /* 마진, 패딩 초기화 */
-html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p{
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{
     margin: 0;
     padding: 0;
 }

@@ -1,16 +1,45 @@
 @charset "utf-8";
+/* CGV PJ 공통핵심 CSS - core.css */
+/* 웹폰트, 공용클래스 */
 
+/*********** 1. 웹폰트 : CDN ***********/
+/* Cute Font, Jua, Audiowide 체 */
 /* 웹폰트 CDN 메이플스토리체*/
 @import url('https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css');
+/* 
+    font-family: 'Audiowide', cursive;
+    font-family: 'Cute Font', cursive;
+    font-family: 'Jua', sans-serif;
+*/
+
+/************* 2. 공통 class *************/
+
+/* 비율유지박스 class */
+.rbx{
+    position: relative;
+    /* 비율유지속박스의 부모자격 */
+}
+/* 비율생성 가상요소 */
+.rbx::before{
+    content: '';
+    display: block;
+    /* 패딩탑값 %로 비율에 맞게 각각셋팅 */
+}
+/* 비율유지속박스 */
+.rbxIn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* IR(Image Replacement) 클래스 */
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
 
 
-html{
-    font-size: 10px;
-    /* 글자체나 글자크기는 하위요소 상속됨!
-    10px로 html에 설정한 이유는 상대단위인 
-    rem으로 설정시 계산하기 쉽게하기위함! */
-}
-/* 전체 웹폰트 일반적용! */
-body{
-    font-family: 'NexonMaplestory';
-}

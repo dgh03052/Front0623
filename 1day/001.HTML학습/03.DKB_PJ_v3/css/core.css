@@ -31,18 +31,15 @@ body{
     margin: 0 auto;
 }
 
-/* 플렉스 박스 클래스 */
-.fbx{
-    /* 플렉스박스 */
-    display: flex;
+/* float설정 class */
+.fll>li{
+    float: left;
 }
-.fxw{
-    /* 랩핑박스 */
-    flex-wrap: wrap;
-}
-.jcc{
-    /* 수평방향 중앙정렬 */
-    justify-content: center;
+/* clear설정 class */
+.fll::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
 /* IR(Image Replacement) 클래스 */

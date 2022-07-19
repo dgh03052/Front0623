@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- 모바일 뷰포트 필수! -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- meta:description 사이트 설명
     (구글검색엔진은 이것만 수집함) -->
     <meta name="description"
@@ -12,10 +10,9 @@
     <!-- meta:keywords 사이트 키워드
     일반 검색엔진에서 키워드 수집에 사용 -->
     <meta name="keywords" content="도깨비, 도깨비,공유,김은숙,김고은,이동욱,유인나,육성재,금토드라마" />
-    <title>쓸쓸하고 찬란하신(神) 도깨비 v2</title>
+    <title>쓸쓸하고 찬란하신(神) 도깨비</title>
     <!-- 메인페이지 외부 CSS만 호출함(공통CSS는 import됨) -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/media.css">
     <style>
 
     </style>
@@ -33,8 +30,7 @@
             </h1>
             <!-- 1-2. 탑메뉴 -->
             <aside class="tmenu">
-                <!-- 플렉스박스 -->
-                <ul class="fbx">
+                <ul class="fll">
                     <li>
                         <a href="#">로그인</a>
                     </li>
@@ -43,8 +39,7 @@
                     </li>
                     <li>
                         <!-- sns메뉴 -->
-                        <!-- 플렉스박스 -->
-                        <ol class="sns fbx">
+                        <ol class="sns fll">
                             <li>
                                 <a href="#" title="트위터 바로가기">
                                     <span class="ir">
@@ -72,9 +67,8 @@
 
             </aside>
             <!-- 1-3. GNB메뉴 -->
-            <nav class="gnb">                
-                <!-- 플렉스박스+가로중앙 -->
-                <ul class="fbx jcc">
+            <nav class="gnb">
+                <ul class="fll">
                     <li class="sm">
                         <a href="#">프로그램 소개</a>
                         <!-- 서브메뉴 -->
@@ -137,27 +131,20 @@
                     </li>
                 </ul>
             </nav>
-
-            <!-- 햄버거버튼 -->
-            <button class="ham" onclick="document.body.classList.toggle('on')"></button>
         </header>
     </div>
     <!-- 2. 메인영역 -->
     <div id="cont">
         <!-- .ibx적용하지 않음! -->
         <main class="cont">
-            <!-- 드라마 문구 이미지 -->
-            <div class="dtxt">
-                <img id="dtxt" src="images/dkb_main.png" alt="도깨비문구">
-            </div>
             <!-- 캐릭터박스 -->
-            <div class="cbx fbx fxw">
+            <div class="cbx">
                 <!-- 1. 공유 -->
                 <div class="cat">
                     <!-- 캐릭터 이미지박스 -->
                     <div class="ci">
                         <!-- 캐릭터 이미지 -->
-                        <img src="./images/dc1.png" alt="공유">
+                        <img src="./images/마동석.jpg" alt="마동석">
                         <!-- 캐릭터 이름이미지 -->
                         <span>
                             <img src="./images/d01.png" alt="진한이름"><img src="./images/d011.png" alt="흐린이름">
@@ -189,7 +176,7 @@
                     <!-- 캐릭터 이미지박스 -->
                     <div class="ci">
                         <!-- 캐릭터 이미지 -->
-                        <img src="./images/dc2.png" alt="김고은">
+                        <img src="./images/장이수.jpg" alt="장이수">
                         <!-- 캐릭터 이름이미지 -->
                         <span>
                             <img src="./images/d02.png" alt="진한이름"><img src="./images/d022.png" alt="흐린이름">
@@ -209,12 +196,12 @@
                             되겠거니 싶어 봐주기로 한다. 근데 그 검을 나보고 뽑아달란다. 그 말이 꼭 끝내자는 말처럼 아프다.</p>
                     </div>
                 </div>
-                <!-- 3. 이동욱 -->
+                <!-- 3. 최귀화 -->
                 <div class="cat">
                     <!-- 캐릭터 이미지박스 -->
                     <div class="ci">
                         <!-- 캐릭터 이미지 -->
-                        <img src="./images/dc3.png" alt="이동욱">
+                        <img src="./images/최귀화.jpg" alt="최귀화">
                         <!-- 캐릭터 이름이미지 -->
                         <span>
                             <img src="./images/d03.png" alt="진한이름"><img src="./images/d033.png" alt="흐린이름">
@@ -235,12 +222,12 @@
                             했고, 그의 서툰 행동들은 하나같이 오답이었다. 이게 다 연애를 드라마로만 배운 탓이다. 그는 헷갈렸다. 이것은 신의 계획일까, 실수일까.</p>
                     </div>
                 </div>
-                <!-- 4. 유인나 -->
+                <!-- 4. 손석구 -->
                 <div class="cat">
                     <!-- 캐릭터 이미지박스 -->
                     <div class="ci">
                         <!-- 캐릭터 이미지 -->
-                        <img src="./images/dc4.png" alt="유인나">
+                        <img src="./images/손석구.jpg" alt="손석구">
                         <!-- 캐릭터 이름이미지 -->
                         <span>
                             <img src="./images/d04.png" alt="진한이름"><img src="./images/d044.png" alt="흐린이름">
@@ -266,9 +253,8 @@
     <div id="info">
         <footer class="ibx info">
             <!-- 3-1. 하단링크 -->
-            <div class="blink">                
-                <!-- 플렉스박스+가로중앙 -->
-                <ul class="fbx jcc">
+            <div class="blink">
+                <ul class="fll">
                     <li>
                         <a href="#">법적고지</a>
                     </li>
@@ -293,8 +279,8 @@
             <div class="addr">
                 <address>
                     (주)씨제이이엔엠 CJ ENM 대표이사 강호성, 허민호 <br>
-                    주소 (03926) 서울시 마포구 상암산로 66 사업자 등록번호 106-81-51510 개인정보보호책임자 김재환 <br>
-                    © CJ ENM. All Rights Reserved.
+                    주소 (03926) 서울시 마포구 상암산로 66 사업자 등록번호 106-81-51510 개인정보보호책임자 김재환 <br> 
+                    © CJ ENM. All Rights Reserved. 
                 </address>
             </div>
             <!-- 3-3. 하단로고 -->
@@ -304,20 +290,21 @@
             <!-- 3-4. 바로가기 -->
             <div class="brand">
                 <select name="sel" id="sel">
-                    <option value="init">브렌드 바로가기</option>
-                    <option value="tvn">tvN</option>
-                    <option value="ocn">OCN</option>
-                    <option value="mnet">MNET</option>
+                    <option value="init">브랜드 바로가기</option>
+                    <option value="tvN">tvN</option>
+                    <option value="ocn">ocn</option>
+                    <option value="mnet">mnet</option>
                 </select>
+
                 <!-- 
-                    [ select 요소 ]
+                    [selct 요소]
                     - 지정된 값을 선택하는 입력요소
                     - 하위필수요소 : option - 각 선택항목
-                    - 유의사항: 값을 선택할 경우 선택값은
-                    option 요소의 속성인 value값을 읽어감
-                    단, value를 안쓸 수 있는데 안쓰면
-                    내부테이터를 읽어감!
+                    - 유의사항 : 값을 선택할 경우 선택값은 option요소의 속성인 value 값을 읽어감
+                    단, value를 쓰지 않는 경우가 있는데 안쓰게 되면 내부데이터를 읽어감!
+
                  -->
+
             </div>
         </footer>
     </div>

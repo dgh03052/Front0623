@@ -6,14 +6,13 @@
     <meta name="description"
     content="Front-end 장우혁 개인 프로젝트 입니다. 애견홈페이지를 만들었습니다."/>
     <title>뭉개뭉개 애견홈페이지</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="../project/css/main.css">
 </head>
-<body class="moong">
+<body>
     <!-- 1.상단영역 -->
     <div id="top">
-        <header class="moong top">
-            <!-- 1-1.메인로고 -->
+        <header class="top ibx">
+            <!-- 1-1.로고 -->
             <h1 class="logo">
                 <a href="index.html">
                     <img src="images/logo.png" alt="뭉개뭉개로고">
@@ -126,9 +125,45 @@
                 </ul>
             </nav>
 
-            <!-- 햄버거버튼 -->
-            <button class="ham" onclick="document.querySelector('.top').classList.toggle('on')"></button>
         </header>
+    </div>
+    <!-- 3. 하단영역 -->
+    <div id="info">
+        <footer class="info ibx">
+            <!-- 3-1.회사정보 -->
+            <address>
+                <img src="images/logo.png" alt="하단로고">
+                <span>
+                    서울 강남구 강남대로96길 16 2층~5층 <br>
+                    Tel. 010-3035-8596 <br>
+                    Copyright ⓒ <strong>뭉개뭉개 All right reserved.
+                </span>
+            </address>
+            <!-- 3-2.sns박스 -->
+            <ol class="sns fbx">
+                <li>
+                    <a href="#" title="페이스북 바로가기">
+                        <span class="ir">
+                            페이스북 바로가기
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="트위터 바로가기">
+                        <span class="ir">
+                            트위터 바로가기
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="인스타그램 바로가기">
+                        <span class="ir">
+                            인스타그램 바로가기
+                        </span>
+                    </a>
+                </li>
+            </ol>
+        </footer>
     </div>
     
 </body>

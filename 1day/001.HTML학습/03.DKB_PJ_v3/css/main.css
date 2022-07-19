@@ -19,28 +19,7 @@ body {
    가로크기 10% 세로크기 auto(생략) */
 }
 
-/* body의 가상요소로 인트로 애니동안 화면가리기 */
-body::after{
-   content: '';
-   display: block;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   z-index: 99999999;
-   /* background-color: #f00; */
-   /* 애니메이션 */
-   animation: delCover .1s 6s forwards;
-}
-/* 가림막 사라지기 애니 키프레임 */
-@keyframes delCover {
-   to{
-      height: 0;
-   }
-} /* 키프레임 */
-
-/********************* 메인영역 *********************/
+/* 메인영역 */
 .cont {
    padding-top: 500px;
    /* 상단패딩: 첫번째 요소 위치밀기의 기본!
@@ -74,41 +53,6 @@ body::after{
    clear: both;
 }
 
-/* 드라마 문구 이미지박스 */
-.dtxt{
-   position: absolute;
-   top: 20vh;
-   right: 0;
-   /* 부모는? 보이는화면*/
-   width: 400px;
-   height: 400px;
-   overflow: hidden;
-
-   /* outline: 2px dotted blue; */
-}
-/* 드라마 문구 이미지 */
-#dtxt{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   /* 부모는? .dtxt*/
-   width: 300px;
-
-   /* 투명도 */
-   opacity: 0;
-
-   /* 애니메이션 */
-   animation: dtxtAni 3s ease-in-out forwards;
-}
-/* 드라마 텍스트 키프레임 */
-@keyframes dtxtAni {
-   to{
-      top: 0;
-      left: 0;
-      opacity: 1;
-   }
-} /* 키프레임 */
-
 /* 캐릭터 개별박스 공통 */
 .cat {
    position: relative;
@@ -124,41 +68,17 @@ body::after{
    부모박스다! */
 
    /* 블록요소 옆으로 흐르게! */
-   /* float: left; -> 플렉스 박스로 전환! */
+   float: left;
    /* 나는 왼쪽~ 너는 오른쪽에 와! */
 
    /* 영역보정값(자식요소 마진변동에 의한
    불일치 부분을 값으로 보정함) */
    padding-bottom: 10px;
 
-   /* 처음에 위로 올라가서 안보임
-   - 보이는 화면 높이만큼 위쪽으로 이동 */
-   transform: translateY(-600%);
-
-   /* 애니메이션: 이시이지반방마 */
-   animation: catAni 2s ease-out 1s forwards;
 }
-/* 캐릭터 박스별 애니메이션 지연시간 차이주기 */
-.cat:nth-child(2){
-   animation-delay: 1.5s;
-}
-.cat:nth-child(3){
-   animation-delay: 2s;
-}
-.cat:nth-child(4){
-   animation-delay: 2.5s;
-}
-/* 캐릭터박스 키프레임 */
-@keyframes catAni {
-   to{
-      transform: translateY(0);
-   }
-} /* 키프레임 */
 
 /* 캐릭터 이미지박스 */
 .ci{
-   position: relative;
-   /* 부모자격: .ci span */
    /* 트랜지션: 속시이지 */
    transition: .4s ease-in-out;
 }
@@ -175,7 +95,7 @@ body::after{
 /* 캐릭터 이름이미지 박스 span */
 .ci span{
    position: absolute;
-   bottom: 4%;
+   bottom: 10%;
    width: 100%;
    /* 부모는? .cat */
    display: block;
@@ -224,8 +144,6 @@ body::after{
    overflow: auto;
    /* 배경: 색이반고윙/크 */
    background: url(../images/eachBG.jpg) no-repeat center/cover;
-   
-   border-radius: 20px 5px 5px 20px;
 
    /* 트랜지션: 속성 시간 이징 지연 */
    transition: height 0.4s ease-out;
