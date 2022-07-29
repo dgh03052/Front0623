@@ -34,9 +34,9 @@ font-family: 'Roboto Condensed', sans-serif;
 */
 
 /* 공사중 표시 */
-body * {
+/* body * {
   outline: 1px dashed gray;
-}
+} */
 
 /************* 2. 공통 class *************/
 /* 중앙 속박스 */
@@ -114,18 +114,20 @@ body * {
   /* 부모자격 */
 }
 
+
 /* 가상요소로 반투명 검정배경 그라데이션 넣기 */
 /* h2요소보다 먼저 그려져서 자연스럽게 아래오도록 ::before사용! */
 .cbx::before{
-  content:'';
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 50%;
-  /* /그라데이션 :아래쪽에서 위쪽으로 검정색에서 투명으로 변화함 */
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rbga(0, 0, 0, 0,));
+  /* 그라데이션: 아래쪽에서 위쪽으로
+  검정색에서 투명으로 변화함 */
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
 
@@ -139,15 +141,16 @@ body * {
   bottom: 0;
   right: 0;
   border: 0px solid red;
-  opacity: 30%;
-  
-  /* 트랜지션 : 속시이지*/
+
+  /* 트랜지션: 속시이지 */
   transition: border .2s ease-in;
 }
+
 /* .cbx에 마우스 오버시 보더애니 */
 .cbx:hover::after{
-  border: 10px solid red;
+  border: min(1.6vw,20px) solid red;
 }
+
 /* 컨텐츠 타이틀박스 */
 .cbx h2{
   position: absolute;
@@ -156,15 +159,17 @@ body * {
   /* 부모는? 싸고있는 .cbx */
 
   /* 글자설정 */
-  font-family: nbg,pist;
+  font-family: pist,nbg;
   font-size: min(3vw,33px);
   font-weight: normal;
   text-align: center;
   color: #fff;
+
   padding: min(50px,3.4vw);
-  /* 박스크기유지 - 패딩,보더 포함 */
+  /* 박스크기유지 - 패딩,보더포함 */
   box-sizing: border-box;
 }
+
 
 /* 컨텐츠 타이틀 작은글자 */
 
@@ -186,6 +191,8 @@ body * {
 }
 
 /* 공통 적용 배경색 클래스 */
-
+.bgc{
+  background-color: #f9f9f9;
+}
 
 /* 등장액션 클래스 */
