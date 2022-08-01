@@ -1,5 +1,6 @@
 // 보그 PJ 공통 기능 JS - common.js
 
+
 ///////////// 제이쿼리 블록 ///////////////////
 $(() => {
 
@@ -8,6 +9,8 @@ $(() => {
 
     /// 부드러운 스크롤 호출!(제이쿼리 아님!)
     startSS();
+
+
 
 
     /******************************** 
@@ -87,26 +90,17 @@ $(() => {
     }); /////////// resize함수 ///////////////////
 
 
-    $(window).on("mousewheel wheel",()=>{
-        console.log("ㅎㅎㅎ");
-        // 부드러운 스크롤 위치변수pos 업데이트
-        // pos = scTop;
-
-    })
-
-
     ////////////////////////////////////
     // 윈도우에 스크롤 이벤트 설정하기 ///
     ////////////////////////////////////
-    $(window).scroll(function () {
+    $(window).scroll(function (e) {
 
         scTop = $(this).scrollTop();
         // scrollTop() -> 세로스크롤바 위치값
         // 참고) 가로스크롤바 위치값은 scrollLeft()
 
         // 스크롤확인+위치값
-        // console.log(scTop);
-        
+        console.log(scTop);
 
         // 1. 상단영역 슬림변경 클래스 on주기!
         // 스크롤위치 기준은 100px이상일때
@@ -168,11 +162,21 @@ $(() => {
                 scrollTop: "0"
             }, 800, "easeOutQuart");
 
-            // 부드러운 스크롤 위치변수에
-            // 변경된 위치값 업데이트 필수!
-            pos = 0; // 숫자값으로 넣음!
+        // 부드러운 스크롤 위치변수에
+        // 변경된 위치값 업데이트 필수!
+        pos = 0; // 숫자값으로 넣음!
 
     }); ///// click ///////////////
 
 
+    // 로딩테스트용 동영상 넣기
+    // $("body").prepend('<iframe width="1090" height="613" src="https://www.youtube.com/embed/GduEtmvwcI0" title="[한산: 용의 출현] 메인 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+
 }); /////////////// jQB ///////////////////////
+
+
+
+// 윈도우 객체 컨텐츠가 모두 로딩된 후 로딩박스 없애기
+$(window).on("load",function(){
+    $(".LDbx").hide();
+}); /////////// load ///////////////
