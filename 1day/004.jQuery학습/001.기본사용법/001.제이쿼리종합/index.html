@@ -1,240 +1,58 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> 슬라이딩 내비게이션(무한이동) </title>
-	<!-- 외부JS 불러오기 -->
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/index.js"></script>
-
-	<style>
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		body {
-			background-color: #05184D;
-		}
-
-		/* 공통class */
-		.bld {
-			/* 숨김클래스 */
-			display: none;
-		}
-
-		.ir {
-			/* IR클래스 */
-			display: block;
-			width: 0;
-			height: 0;
-			overflow: hidden;
-		}
-
-		/* 슬라이드 전체박스 */
-		#slider {
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-			/* 세로중앙이동 */
-			width: 600px;
-			max-width: 90%;
-			/* 양쪽에 여백있게 */
-			margin: 0 auto;
-			/* 가로중앙 마영오! */
-			background-color: #FFF;
-			border: 2px solid #FDF6DD;
-		}
-
-		/* 가상요소로 비율밀기! */
-		#slider::before {
-			content: '';
-			display: block;
-			margin-top: 60%;
-		}
-
-		/* 비율유지속박스 */
-		#viewer {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		/* 슬라이드 이동박스 */
-		#viewer ul {
-			position: relative;
-			/* 위치이동포지션 */
-			left: 0;
-			/* 기준위치값 */
-			display: flex;
-			/* 플랙스박스 */
-			width: 400%;
-			/* 사진4장 */
-			height: 100%;
-
-			/* 3無 */
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		#viewer li {
-			position: relative;
-			/* 부모자격 - 등장글자! */
-			flex: 1;
-		}
-
-		/* 각 슬라이드 공통 이미지 셋팅 */
-		#viewer li img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			/* 이미지 비율유지 맞춤 */
-		}
-
-
-		/* 블릿표시자 */
-		#indic {
-			position: absolute;
-			bottom: 5px;
-			right: 5px;
-
-			display: flex;
-			/* 플랙스박스 */
-
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		#indic li {
-			width: 16px;
-			height: 16px;
-			margin-right: 6px;
-			background-color: #fff;
-			border-radius: 50%;
-			box-shadow: 0 0 5px #000;
-			box-sizing: border-box;
-			/* 크기유지 */
-		}
-
-		/* 마우스 오버시 + 선택메뉴 class="on" */
-		#indic li:hover,
-		#indic li.on {
-			background-color: #222;
-			border: 2px solid lightgoldenrodyellow;
-		}
-
-		#indic li a {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
-
-		/* 양쪽이동버튼 */
-		.abtn {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 25px;
-			height: 49px;
-		}
-
-		/* 마우스 오버시 배경이미지 위치변경 */
-		.abtn:hover {
-			background-position-y: -49px;
-		}
-
-		/* 왼쪽버튼 */
-		.lb {
-			left: -50px;
-			background: url(image/btn_shop_bn_left.png) no-repeat;
-		}
-
-		/* 오른쪽버튼 */
-		.rb {
-			right: -50px;
-			background: url(image/btn_shop_bn_right.png) no-repeat;
-		}
-
-		/* 미디어쿼리 */
-		@media only screen and (max-width:800px) {
-
-			/* 이동버튼 위치변경하기 */
-			.lb {
-				left: 20px;
-			}
-
-			.rb {
-				right: 20px;
-			}
-
-		}
-
-		/* 미디어쿼리 800px 이하 */
-	</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 기본 사용법</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- 제이쿼리는 순서가 매우중요함
+    1.jQuery라이브러리/2.jQuery UI/3.구현JS -->
 </head>
-
-
 <body>
+    <!-- 1. 전체타이틀 -->
+    <h1 class="tit">
+        제이쿼리 세계에 오신것을 환영합니다!
+    </h1>
+    
+    <!-- 2. 버튼 그룹 -->
+    <div class="btns">
+        <button>들어가기</button>
+        <button>옆방으로!</button>
+        <button>윗층으로 도망가!</button>
+        <button>다시옆방으로!</button>
+        <button>무서우니 윗층으로!</button>
+        <button>치료주사방으로!</button>
+        <button>3번방으로!</button>
+        <button>1번방으로!</button>
+        <button>헬기를 호출!</button>
+    </div>
 
-	<div id="slider">
+    <!-- 3.빌딩 : 5층건물(한층에 li 2개씩) -->
+    <ul class="building">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
-		<!-- 슬라이드 속박스 -->
-		<div id="viewer">
-			<!-- 슬라이드 이동박스 -->
-			<ul>
-				<li>
-					<img src="../../002.실전연습/03_Click_PhotoViewer/image/slide1.jpg" alt="슬라이드">
-				</li>
-				<li>
-					<img src="../../002.실전연습/03_Click_PhotoViewer/image/slide2.jpg" alt="슬라이드">
-				</li>
-				<li>
-					<img src="../../002.실전연습/03_Click_PhotoViewer/image/slide3.jpg" alt="슬라이드">
-				</li>
-				<li>
-					<img src="../../002.실전연습/03_Click_PhotoViewer/image/slide4.jpg" alt="슬라이드">
-				</li>
-			</ul>
-		</div>
+    <!-- 4. 미니언즈 주인공 -->
+    <div class="mi">
+        <img src="images/m1.png" alt="미니언즈">
+        <!-- 말풍선박스 -->
+        <span class="msg">8번방으로 어서 들어가야지!</span>
+    </div>
 
-		<!-- 블릿표시자 -->
-		<ul id="indic">
-			<li class="on"><a href="#"><span class="bld">블릿</span></a></li>
-			<li><a href="#"><span class="bld">블릿</span></a></li>
-			<li><a href="#"><span class="bld">블릿</span></a></li>
-			<li><a href="#"><span class="bld">블릿</span></a></li>
-		</ul>
+    <!-- 5. 구출헬기 -->
+    <img src="images/heli1.png" alt="구조헬기" class="heli">
 
-		<!-- 양쪽이동버튼 -->
-		<a href="#" class="abtn lb">
-			<span class="ir">왼쪽이동버튼</span>
-		</a>
-		<a href="#" class="abtn rb">
-			<span class="ir">오른쪽이동버튼</span>
-		</a>
-
-
-
-	</div>
-
-	<!---------- jQuery code Start ---------->
-	<script>
-
-
-	</script>
 </body>
-
 </html>
